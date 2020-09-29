@@ -1,6 +1,6 @@
-# HC5962
+# G-DOCK(R619AC)
 
-自动编译openwrt的hc5962 B70 固件的项目。
+自动编译openwrt的G-DOCK(R619AC)固件的项目。
 使用的源码有
 https://github.com/coolsnowwolf/lede
 https://github.com/Lienol/openwrt
