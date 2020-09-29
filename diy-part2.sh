@@ -8,8 +8,8 @@
 # Blog: https://p3terx.com
 #============================================================
 
-device_name='ZTE-E8820S'
-wifi_name='ZET'
+device_name='G-DOCK'
+wifi_name='G-DOCK'
 lan_ip='192.168.1.1'        # Lan Ip地址
 utc_name='Asia\/Shanghai'   # 时区
  
