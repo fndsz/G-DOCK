@@ -10,5 +10,5 @@
 
 device_name='G-DOCK'
 wifi_name='G-DOCK'
-lan_ip='192.168.1.1'        # Lan Ip地址
-utc_name='Asia\/Shanghai'   # 时区
+lan_ip='192.168.7.1'       
+utc_name='Asia\/Shanghai'  
