@@ -10,8 +10,7 @@
 # Author: P3TERX
 # Blog: https://p3terx.com
 #=================================================
-name: Build OpenWrt
-
+name: Build OpenWrt R619AC
 
 on:
   repository_dispatch:
@@ -38,7 +37,7 @@ env:
 
 jobs:
   build:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
 
     steps:
     - name: Checkout
