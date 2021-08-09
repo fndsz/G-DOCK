@@ -22,7 +22,7 @@ sed -i 's/OpenWrt/R619ac/g' package/base-files/files/bin/config_generate
 sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
 
 # 删除原主题包
-rm -rf package/lean/luci-theme-argon
+# rm -rf package/lean/luci-theme-argon
 # rm -rf openwrt/package/lean/luci-theme-netgear
 
 # 添加新的主题包
@@ -30,7 +30,7 @@ rm -rf package/lean/luci-theme-argon
 # git clone https://github.com/sypopo/luci-theme-atmaterial.git package/lean/luci-theme-atmaterial
 # git clone https://github.com/sypopo/luci-theme-argon-mc.git package/lean/luci-theme-argon-mc
 # git clone https://github.com/Leo-Jo-My/luci-theme-opentomcat.git package/lean/luci-theme-opentomcat
-git clone https://github.com/XXKDB/luci-theme-argon_armygreen.git package/lean/luci-theme-argon
+# git clone https://github.com/XXKDB/luci-theme-argon_armygreen.git package/lean/luci-theme-argon
 # 更新
 # ./scripts/feeds update -a && ./scripts/feeds install -a
 
