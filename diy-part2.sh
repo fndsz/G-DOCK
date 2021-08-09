@@ -31,7 +31,7 @@ sed -i "s/'UTC'/'CST-8'\n   set system.@system[-1].zonename='$utc_name'/g" packa
 
 #修改默认主题
 echo '修改默认主题'
-sed -i 's/config internal themes/config internal themes\n    option Argon  \"\/luci-static\/argon\"/g' feeds/luci/modules/luci-base/root/etc/config/luci
+sed -i 's/config internal themes/config internal themes\n    option argon_armygreen  \"\/luci-static\/argon_armygreen\"/g' feeds/luci/modules/luci-base/root/etc/config/luci
 
 echo "修改wifi名称"
 sed -i "s/OpenWrt/$wifi_name/g" package/kernel/mac80211/files/lib/wifi/mac80211.sh
