@@ -1,4 +1,4 @@
-
+#
 # Copyright (c) 2019-2020 P3TERX <https://p3terx.com>
 #
 # This is free software, licensed under the MIT License.
@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build OpenWrt R619AC
+name: Build R619AC
 
 on:
   repository_dispatch:
@@ -18,16 +18,12 @@ on:
         description: 'SSH connection to Actions'
         required: false
         default: 'false'
-#   schedule:
-#    - cron: 10 */12 * * *
-#   watch:
-#     types: started
-    
+
 env:
-  REPO_URL: https://github.com/fndsz/lean-lede
+  REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: r619ac.config
+  CONFIG_FILE: R619AC.config
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part2.sh
   UPLOAD_BIN_DIR: true
@@ -40,8 +36,7 @@ env:
 jobs:
   build:
     runs-on: ubuntu-20.04
-#     if: github.event.repository.owner.id == github.event.sender.id
-    
+
     steps:
     - name: Checkout
       uses: actions/checkout@main
@@ -52,7 +47,7 @@ jobs:
       run: |
         sudo rm -rf /etc/apt/sources.list.d/* /usr/share/dotnet /usr/local/lib/android /opt/ghc
         sudo -E apt-get -qq update
-        sudo -E apt-get -qq install $(curl -fsSL git.io/JURWx)
+        sudo -E apt-get -qq install $(curl -fsSL git.io/depends-ubuntu-2004)
         sudo -E apt-get -qq autoremove --purge
         sudo -E apt-get -qq clean
         sudo timedatectl set-timezone "$TZ"
@@ -169,17 +164,17 @@ jobs:
         body_path: release.txt
         files: ${{ env.FIRMWARE }}/*
 
-    - name: Remove old Workflow
+    - name: Delete workflow runs
       uses: GitRML/delete-workflow-runs@main
       with:
-        retain_days: 30
+        retain_days: 1
         keep_minimum_runs: 3
 
     - name: Remove old Releases
       uses: dev-drprasad/delete-older-releases@v0.1.0
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       with:
-        keep_latest: 14
+        keep_latest: 3
         delete_tags: true
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
