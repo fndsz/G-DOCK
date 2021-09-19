@@ -31,7 +31,7 @@ rm -rf package/lean/luci-theme-argon
 # git clone https://github.com/sypopo/luci-theme-atmaterial.git package/lean/luci-theme-atmaterial
 # git clone https://github.com/sypopo/luci-theme-argon-mc.git package/lean/luci-theme-argon-mc
 # git clone https://github.com/Leo-Jo-My/luci-theme-opentomcat.git package/lean/luci-theme-opentomcat
-git clone https://github.com/fndsz/luci-theme-argon_armygreen.git package/lean/luci-theme-argon_armygreen
+# git clone https://github.com/fndsz/luci-theme-argon_armygreen.git package/lean/luci-theme-argon_armygreen
 # 更新
 # ./scripts/feeds update -a && ./scripts/feeds install -a
 
@@ -40,7 +40,7 @@ git clone https://github.com/fndsz/luci-theme-argon_armygreen.git package/lean/l
 sed -i "s/OpenWrt /Fndsz build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" package/lean/default-settings/files/zzz-default-settings
 
 # Modify default theme
-# sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
+sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
 
 # Add kernel build user
 [ -z $(grep "CONFIG_KERNEL_BUILD_USER=" .config) ] &&
