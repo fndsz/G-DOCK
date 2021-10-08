@@ -31,7 +31,7 @@ rm -rf package/lean/luci-theme-argon
 # git clone https://github.com/sypopo/luci-theme-atmaterial.git package/lean/luci-theme-atmaterial
 # git clone https://github.com/sypopo/luci-theme-argon-mc.git package/lean/luci-theme-argon-mc
 # git clone https://github.com/Leo-Jo-My/luci-theme-opentomcat.git package/lean/luci-theme-opentomcat
-# git clone https://github.com/fndsz/luci-theme-argon_armygreen.git package/lean/luci-theme-argon_armygreen
+# git clone https://github.com/fndsz/luci-theme-argon.git package/lean/luci-theme-argon
 # 更新
 # ./scripts/feeds update -a && ./scripts/feeds install -a
 
